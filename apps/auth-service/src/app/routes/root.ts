@@ -1,7 +1,10 @@
-import { FastifyInstance } from 'fastify';
+import { FastifyInstance } from "fastify";
 
-export default async function (fastify: FastifyInstance) {
-  fastify.get('/', async function () {
-    return { message: 'Hello API' };
-  });
+const testRoutes = async(app:FastifyInstance)=>{
+
+   app.get('/',()=>{
+     return '<h1>Hello, World!</h1>';
+   })
 }
+
+export default testRoutes;

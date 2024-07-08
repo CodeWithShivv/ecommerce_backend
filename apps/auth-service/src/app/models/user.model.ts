@@ -28,6 +28,7 @@ userSchema.methods.matchPassword = async function(enteredPassword: string) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
 
+
 const User = model<IUser>('User', userSchema);
 
 export default User;
